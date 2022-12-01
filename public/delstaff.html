@@ -1,0 +1,61 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <title>Manager: Delete Staff</title>
+
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+            background-color: #ffb72b;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex py-5 px-20 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                <div class="lg:pl-3">
+                    <h1 class="text-4xl text-center">AGB</h1>
+                    <h1 class="text-2xl tracking-wider">FITNESS</h1>
+                </div>
+            </a>
+            <nav class="md:ml-auto flex flex-wrap items-center text-base font-medium justify-center">
+                <a class="mr-5 hover:text-gray-900" href="/public/index.html">HOME</a>
+                <a class="mr-5 hover:text-gray-900" href="/public/aboutus.html">ABOUT US</a>
+                <a class="mr-5 hover:text-gray-900" href="/public/programs.html">PROGRAMS</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <div class="py-32 px-10 min-h-screen ">
+
+        <h1 class="text-center text-3xl">Delete Staff Data</h1>
+        <div class="bg-white p-10 md:w-3/4 lg:w-1/2 mx-auto mt-5">
+
+            <form action="/remove" method="post">
+                <div class="flex items-center mb-5">
+                    <label for="name" class="inline-block w-20 mr-6 font-bold text-gray-600">Staff ID</label>
+                    <input type="text" id="staffID" name="_id" class="flex-1 py-2 border-b-2 border-gray-400 focus:border-orange-400 
+                            text-gray-600 placeholder-gray-400
+                            outline-none">
+                </div>
+
+                <div class="text-right">
+                    <button type="submit" class="py-3 px-8 bg-orange-400 text-white font-bold">Submit</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <title>Goals: Update Goal</title>
+
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+            background-color: #ffb72b;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex py-5 px-20 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                <div class="lg:pl-3">
+                    <h1 class="text-4xl text-center">AGB</h1>
+                    <h1 class="text-2xl tracking-wider">FITNESS</h1>
+                </div>
+            </a>
+            <nav class="md:ml-auto flex flex-wrap items-center text-base font-medium justify-center">
+                <a class="mr-5 hover:text-gray-900" href="/index.html">HOME</a>
+                <a class="mr-5 hover:text-gray-900" href="/aboutus.html">ABOUT US</a>
+                <a class="mr-5 hover:text-gray-900" href="/programs.html">PROGRAMS</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <div class="py-32 px-10 min-h-screen ">
+        <h1 class="text-center text-3xl mb-5">Update Your Goals</h1>
+        <div class="bg-white p-10 md:w-3/4 lg:w-1/2 mx-auto mb-10">
+
+            <form action="/goalUpdate" method="post">
+                <div class="flex items-center mb-5">
+                    <label for="title" class="inline-block w-28 font-bold text-gray-600">Goal Title</label>
+                    <input type="text" name="title" class="flex-1 py-2 border-b-2 border-gray-400 focus:border-orange-400 
+                            text-gray-600 placeholder-gray-400
+                            outline-none">
+                </div>
+                <div class="flex items-center mb-5">
+                    <label for="description" class="inline-block w-28 font-bold text-gray-600">Description</label>
+                    <input type="text" name="description" class="flex-1 py-2 border-b-2 border-gray-400 focus:border-orange-400 
+                            text-gray-600 placeholder-gray-400
+                            outline-none">
+                </div>
+
+                <div class="text-right">
+                    <button type="submit" class="py-3 px-8 bg-orange-400 text-white font-bold">Submit</button>
+                </div>
+            </form>
+        </div>
+
+
+
+    </div>
+</body>
+
+</html>

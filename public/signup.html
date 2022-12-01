@@ -1,0 +1,73 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <title>Signup Page</title>
+
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+            
+        }
+        .holder{
+            background-color: #ffe69a;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex py-5 px-20 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                <div class="lg:pl-3">
+                    <h1 class="text-4xl text-center">AGB</h1>
+                    <h1 class="text-2xl tracking-wider">FITNESS</h1>
+                </div>
+            </a>
+        </div>
+    </header>
+
+    <div class="container mx-auto">
+        <div class="holder max-w-md p-5 mx-auto my-10 rounded-md shadow-sm">
+            <div class="text-center">
+                <h1 class="my-3 text-3xl font-semibold text-gray-700">Sign Up</h1>
+                <p class="text-gray-400">Feel free to join us!</p>
+            </div>
+            <div class="">
+                <form action="/register" method="POST">
+                    <div class="mb-6">
+                        <label for="name" class="block mb-2 text-sm font-medium text-gray-600">Full Name</label>
+                        <input type="text" name="name" required
+                            class="w-full px-3 py-2 rounded-md focus:outline-none focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200" />
+                    </div>
+                    <div class="mb-6">
+                        <label for="email" class="block mb-2 text-sm font-medium text-gray-600">Email</label>
+                        <input type="email" name="email" required
+                            class="w-full px-3 py-2 rounded-md focus:outline-none focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200" />
+                    </div>
+                    <div class="mb-6">
+                        <label for="password" class="block mb-2 text-sm font-medium text-gray-600">Password</label>
+                        <input type="password" name="password" required
+                            class="w-full px-3 py-2 rounded-md focus:outline-none focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200" />
+                    </div>
+                    <div class="mb-6">
+                        <button type="submit"
+                            class="w-full px-2 py-4 text-white bg-gray-500 rounded-md  focus:bg-gray-600 focus:outline-none">
+                            Sign Up
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
