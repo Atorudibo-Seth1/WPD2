@@ -1,5 +1,7 @@
 const nedb = require('nedb');
 const path = require('path');
+const bcrypt = require('bcrypt');
+const saltRounds = 10;
 
 class StaffandUsers {
     constructor(dbFilePath) {
@@ -11,12 +13,33 @@ class StaffandUsers {
         }
     }
 
-    register(name, email, password){
-        if(name && email && password) {
-            this.db.insert({name: name, email: email, password: password});
-        } else{
-            console.log("There might be an error!");
-        }
+    create(name, email, password){
+        const that = this;
+        bcrypt.hash(password, saltRounds).then(function(hash) {
+            var entry = {
+                name: name,
+                email: email,
+                password: hash
+            };
+            that.db.insert(entry, function(err) {
+                if(err) {
+                    console.log("Cannot insert user: ", name);
+                }
+            });
+        }); 
+    }
+
+    lookup(user, cb){
+        this.db.find({email: user}, function(err, entries) {
+            if(err) {
+                return cb(null, null);
+            } else {
+                if(entries.length == 0) {
+                    return cb(null, null);
+                }
+                return cb(null, entries[0]);
+            }
+        })
     }
 
     newStaff(name) {

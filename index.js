@@ -2,6 +2,10 @@ const express = require('express');
 const nedb = require('nedb')
 const app = express();
 const mustache = require('mustache-express')
+require('dotenv').config() // loads data from .env file
+
+const cookieParser = require('cookie-parser')
+app.use(cookieParser())
 
 const router = require('./routes/agbRoutes');
 const path = require('path');

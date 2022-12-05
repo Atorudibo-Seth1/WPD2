@@ -1,4 +1,5 @@
 const express = require('express');
+const { verify } = require('jsonwebtoken');
 const { send } = require('process');
 const router = express.Router();
 const controller = require('../controllers/agbControllers.js')
@@ -18,7 +19,9 @@ router.get('/signin', controller.signin)
 
 router.get('/signup', controller.signup)
 
-router.get('/logout', controller.logout)
+router.get('/exit', controller.exit)
+
+router.get('/logout', verify, controller.logout)
 
 router.get('/manager', controller.staff_list)
 
@@ -34,7 +37,9 @@ router.post('/newStaff', controller.newStaff)
 
 router.post('/remove', controller.remove)
 
-router.post('/register', controller.register)
+router.post('/register', controller.post_new_user)
+
+router.post('/login', controller.login, controller.home_page)
 
 router.get('/goals', controller2.goals)
 
