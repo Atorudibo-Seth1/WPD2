@@ -13,7 +13,7 @@ router.get('/about', controller.about_us)
 
 router.get('/aboutus', controller.real_aboutus)
 
-router.get('/programs',controller.verify, controller.programs) 
+router.get('/programs', controller.programs) 
 
 router.get('/signin', controller.signin)
 
